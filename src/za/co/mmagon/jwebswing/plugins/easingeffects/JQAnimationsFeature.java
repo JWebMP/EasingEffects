@@ -3,16 +3,29 @@ package za.co.mmagon.jwebswing.plugins.easingeffects;
 import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.IFeature;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
  *
  * @author Marc Magon
  */
+@ComponentInformation(name = "Easing Animations ", description = "Specify an easing animation for a component",
+        url = "http://gsgd.co.uk/sandbox/jquery/easing/")
 public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFeature> implements IFeature
 {
 
+    private static final long serialVersionUID = 1L;
+    /**
+     * The opening effect
+     */
     private JQEasingEffects openingEffect;
+    /**
+     * The closing effect
+     */
     private JQEasingEffects closingEffect;
+    /**
+     * The movement speed (default 200)
+     */
     private int movementSpeed = 2500;
 
     /**
@@ -28,7 +41,7 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
         this.openingEffect = openingEffect;
         this.closingEffect = closingEffect;
         this.movementSpeed = movementSpeed;
-        getJavascriptReferences().add(new JQEasingJavascriptReference());
+        //getJavascriptReferences().add(new JQEasingJavascriptReference());
     }
 
     /**
@@ -54,31 +67,61 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
         this(effect, effect, 2500);
     }
 
+    /**
+     * Returns the opening effect
+     *
+     * @return
+     */
     public JQEasingEffects getOpeningEffect()
     {
         return openingEffect;
     }
 
+    /**
+     * Sets the opening effect
+     *
+     * @param openingEffect
+     */
     public void setOpeningEffect(JQEasingEffects openingEffect)
     {
         this.openingEffect = openingEffect;
     }
 
+    /**
+     * Gets the closing effect
+     *
+     * @return
+     */
     public JQEasingEffects getClosingEffect()
     {
         return closingEffect;
     }
 
+    /**
+     * Sets the closing effect
+     *
+     * @param closingEffect
+     */
     public void setClosingEffect(JQEasingEffects closingEffect)
     {
         this.closingEffect = closingEffect;
     }
 
+    /**
+     * Gets the movement speed
+     *
+     * @return
+     */
     public int getMovementSpeed()
     {
         return movementSpeed;
     }
 
+    /**
+     * Sets the movement speed
+     *
+     * @param movementSpeed
+     */
     public void setMovementSpeed(int movementSpeed)
     {
         this.movementSpeed = movementSpeed;

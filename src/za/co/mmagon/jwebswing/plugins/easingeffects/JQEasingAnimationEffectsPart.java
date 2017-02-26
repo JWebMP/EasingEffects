@@ -2,7 +2,6 @@ package za.co.mmagon.jwebswing.plugins.easingeffects;
 
 import za.co.mmagon.jwebswing.generics.Direction;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * This is the universal easing animation object JavaScript part
@@ -18,10 +17,22 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * The easing object
+     */
     private JQEasingEffects easing;
+    /**
+     * The duration object
+     */
     private Integer duration;
+    /**
+     * The direction object
+     */
     private Direction direction;
 
+    /**
+     * Creates a new instance of the easing javascript options
+     */
     public JQEasingAnimationEffectsPart()
     {
     }
@@ -29,8 +40,8 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
     /**
      * Construct a new animation effects part using the supplies parameters
      * <p>
-     * @param easing    The actual animation to apply
-     * @param duration  The duration in ms to apply
+     * @param easing The actual animation to apply
+     * @param duration The duration in ms to apply
      * @param direction The direction in which to apply it
      */
     public JQEasingAnimationEffectsPart(JQEasingEffects easing, Integer duration, Direction direction)
@@ -53,7 +64,7 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
     /**
      * Construct a new animation effects part using the supplies parameters
      * <p>
-     * @param easing   The actual animation to apply
+     * @param easing The actual animation to apply
      * @param duration The duration in ms to apply
      */
     public JQEasingAnimationEffectsPart(JQEasingEffects easing, Integer duration)
@@ -121,11 +132,4 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
     {
         this.direction = direction;
     }
-
-    @Override
-    public JavascriptPartType getJavascriptType()
-    {
-        return JavascriptPartType.Javascript;
-    }
-
 }

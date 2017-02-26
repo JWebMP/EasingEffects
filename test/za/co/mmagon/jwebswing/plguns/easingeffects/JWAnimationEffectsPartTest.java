@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.htmlbuilder.effects;
+package za.co.mmagon.jwebswing.plguns.easingeffects;
 
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingAnimationEffectsPart;
