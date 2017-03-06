@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -39,8 +39,8 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
                    pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects/wiki",
                    pluginOriginalHomepage = "http://easings.net/",
                    pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
-                   pluginIconUrl = "bower_components/jquery-easing/icon.jpg",
-                   pluginIconImageUrl = "bower_components/jquery-easing/example.jpg",
+                   pluginIconUrl = "bower_components/jquery-easing/icon.png",
+                   pluginIconImageUrl = "bower_components/jquery-easing/example.png",
                    pluginLastUpdatedDate = "2017/03/04"
 )
 public class EasingPageConfigurator extends PageConfigurator
