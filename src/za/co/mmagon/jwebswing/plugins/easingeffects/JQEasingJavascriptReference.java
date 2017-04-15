@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,6 +17,7 @@
 package za.co.mmagon.jwebswing.plugins.easingeffects;
 
 import za.co.mmagon.jwebswing.base.references.JavascriptReference;
+import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
 
 /**
  *
@@ -37,5 +38,6 @@ public class JQEasingJavascriptReference extends JavascriptReference
     public JQEasingJavascriptReference()
     {
         super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
+        setPriority(RequirementsPriority.Third);
     }
 }
