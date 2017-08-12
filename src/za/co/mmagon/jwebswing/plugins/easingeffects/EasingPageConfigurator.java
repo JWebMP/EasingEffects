@@ -21,60 +21,58 @@ import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 
 /**
- *
  * @author GedMarc
  * @since 26 Feb 2017
- *
  */
 @PluginInformation(pluginName = "Easing Animations",
-                   pluginUniqueName = "easing",
-                   pluginDescription = "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
-                   + "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in” and “ease out,” respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
-                   pluginVersion = "1.4.1",
-                   pluginDependancyUniqueIDs = "jquery",
-                   pluginCategories = "animation, jquery,easing",
-                   pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
-                   pluginGitUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects",
-                   pluginSourceUrl = "http://gsgd.co.uk/sandbox/jquery/easing/",
-                   pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects/wiki",
-                   pluginOriginalHomepage = "http://easings.net/",
-                   pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
-                   pluginIconUrl = "bower_components/jquery-easing/icon.png",
-                   pluginIconImageUrl = "bower_components/jquery-easing/example.png",
-                   pluginLastUpdatedDate = "2017/03/04"
+		pluginUniqueName = "easing",
+		pluginDescription = "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
+				+ "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in” and “ease out,” respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
+		pluginVersion = "1.4.1",
+		pluginDependancyUniqueIDs = "jquery",
+		pluginCategories = "animation, jquery,easing",
+		pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
+		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects",
+		pluginSourceUrl = "http://gsgd.co.uk/sandbox/jquery/easing/",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects/wiki",
+		pluginOriginalHomepage = "http://easings.net/",
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
+		pluginIconUrl = "bower_components/jquery-easing/icon.png",
+		pluginIconImageUrl = "bower_components/jquery-easing/example.png",
+		pluginLastUpdatedDate = "2017/03/04"
 )
 public class EasingPageConfigurator extends PageConfigurator
 {
 
-    private static final long serialVersionUID = 1L;
-    private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
+	private static final long serialVersionUID = 1L;
+	private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
 
-    /**
-     * A new instance of the page configurator
-     */
-    public EasingPageConfigurator()
-    {
+	/**
+	 * A new instance of the page configurator
+	 */
+	public EasingPageConfigurator()
+	{
 
-    }
+	}
 
-    @Override
-    public Page configure(Page page)
-    {
-        if (!page.isConfigured())
-        {
-            page.getBody().addJavaScriptReference(reference);
-        }
-        return page;
-    }
+	/**
+	 * Get the reference
+	 *
+	 * @return
+	 */
+	public static JQEasingJavascriptReference getReference()
+	{
+		return reference;
+	}
 
-    /**
-     * Get the reference
-     *
-     * @return
-     */
-    public static JQEasingJavascriptReference getReference()
-    {
-        return reference;
-    }
+	@Override
+	public Page configure(Page page)
+	{
+		if (!page.isConfigured())
+		{
+			page.getBody().addJavaScriptReference(reference);
+		}
+		return page;
+	}
 
 }

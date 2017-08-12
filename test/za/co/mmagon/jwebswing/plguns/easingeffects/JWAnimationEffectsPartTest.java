@@ -16,29 +16,28 @@
  */
 package za.co.mmagon.jwebswing.plguns.easingeffects;
 
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingAnimationEffectsPart;
-import za.co.mmagon.jwebswing.generics.Direction;
 import org.junit.Test;
+import za.co.mmagon.jwebswing.generics.Direction;
+import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingAnimationEffectsPart;
+import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
 /**
- *
  * @author GedMarc
  */
 public class JWAnimationEffectsPartTest
 {
 
-    public JWAnimationEffectsPartTest()
-    {
+	public JWAnimationEffectsPartTest()
+	{
 
-    }
+	}
 
-    @Test
-    public void test()
-    {
-        JQEasingAnimationEffectsPart pt = new JQEasingAnimationEffectsPart();
-        pt.setDirection(Direction.Vertical);
-        pt.setEasing(JQEasingEffects.swing);
-        System.out.println(pt.toString());
-    }
+	@Test
+	public void test()
+	{
+		JQEasingAnimationEffectsPart pt = new JQEasingAnimationEffectsPart();
+		pt.setDirection(Direction.Vertical);
+		pt.setEasing(JQEasingEffects.swing);
+		System.out.println(pt.toString());
+	}
 }

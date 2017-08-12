@@ -21,48 +21,49 @@ import za.co.mmagon.jwebswing.base.html.interfaces.EasingAnimation;
 /**
  * Defines the effects available in the Easing Animation Suite
  * <p>
+ *
  * @author mmagon
  */
 public enum JQEasingEffects implements EasingAnimation
 {
 
-    linear,
-    slide,
-    swing,
-    fadeIn,
-    fadeOut,
-    easeInQuad,
-    easeOutQuad,
-    easeInOutQuad,
-    easeInCubic,
-    easeOutCubic,
-    easeInOutCubic,
-    easeInQuart,
-    easeOutQuart,
-    easeInOutQuart,
-    easeInQuint,
-    easeOutQuint,
-    easeInOutQuint,
-    easeInExpo,
-    easeOutExpo,
-    easeInOutExpo,
-    easeInSine,
-    easeOutSine,
-    easeInOutSine,
-    easeInCirc,
-    easeOutCirc,
-    easeInOutCirc,
-    easeInElastic,
-    easeOutElastic,
-    easeInOutElastic,
-    easeInBack,
-    easeOutBack,
-    easeInOutBack,
-    easeInBounce,
-    easeOutBounce,
-    easeInOutBounce,
-    /**
-     * Sets this field as not set
-     */
-    Unset;
+	linear,
+	slide,
+	swing,
+	fadeIn,
+	fadeOut,
+	easeInQuad,
+	easeOutQuad,
+	easeInOutQuad,
+	easeInCubic,
+	easeOutCubic,
+	easeInOutCubic,
+	easeInQuart,
+	easeOutQuart,
+	easeInOutQuart,
+	easeInQuint,
+	easeOutQuint,
+	easeInOutQuint,
+	easeInExpo,
+	easeOutExpo,
+	easeInOutExpo,
+	easeInSine,
+	easeOutSine,
+	easeInOutSine,
+	easeInCirc,
+	easeOutCirc,
+	easeInOutCirc,
+	easeInElastic,
+	easeOutElastic,
+	easeInOutElastic,
+	easeInBack,
+	easeOutBack,
+	easeInOutBack,
+	easeInBounce,
+	easeOutBounce,
+	easeInOutBounce,
+	/**
+	 * Sets this field as not set
+	 */
+	Unset;
 }

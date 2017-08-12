@@ -20,24 +20,22 @@ import za.co.mmagon.jwebswing.base.references.JavascriptReference;
 import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
 
 /**
- *
  * @author GedMarc
- * @since Mar 1, 2015
  * @version 1.0
  * <p>
- *
+ * @since Mar 1, 2015
  */
 public class JQEasingJavascriptReference extends JavascriptReference
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     *
-     */
-    public JQEasingJavascriptReference()
-    {
-        super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
-        setPriority(RequirementsPriority.Third);
-    }
+	/**
+	 *
+	 */
+	public JQEasingJavascriptReference()
+	{
+		super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
+		setPriority(RequirementsPriority.Third);
+	}
 }

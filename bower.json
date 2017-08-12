@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-	"jquery-easing": "https://github.com/gdsmith/jquery.easing.git"
+    "jquery-easing": "https://github.com/gdsmith/jquery.easing.git"
   }
 }
