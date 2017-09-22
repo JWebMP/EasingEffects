@@ -58,7 +58,7 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 		this.movementSpeed = movementSpeed;
 		//getJavascriptReferences().add(new JQEasingJavascriptReference());
 	}
-
+	
 	/**
 	 * Creates an animation with a closing and opening effect at 2500 milliseconds
 	 *
@@ -69,7 +69,7 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	{
 		this(openingEffect, closingEffect, 2500);
 	}
-
+	
 	/**
 	 * Creates an animation with a closing and opening effect at 2500 milliseconds
 	 *
@@ -78,6 +78,12 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	public JQAnimationsFeature(JQEasingEffects effect)
 	{
 		this(effect, effect, 2500);
+	}
+	
+	@Override
+	protected void assignFunctionsToComponent()
+	{
+	
 	}
 
 	/**
