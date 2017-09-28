@@ -16,7 +16,7 @@
  */
 package za.co.mmagon.jwebswing.plguns.easingeffects;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.generics.Direction;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingAnimationEffectsPart;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
