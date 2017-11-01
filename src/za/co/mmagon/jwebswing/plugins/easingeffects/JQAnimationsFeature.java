@@ -46,9 +46,12 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	/**
 	 * Creates an animation with a closing and opening effect at the movement speed in milliseconds
 	 *
-	 * @param openingEffect The effect to use on opening
-	 * @param closingEffect The effect to use on closing
-	 * @param movementSpeed The speed in ms
+	 * @param openingEffect
+	 * 		The effect to use on opening
+	 * @param closingEffect
+	 * 		The effect to use on closing
+	 * @param movementSpeed
+	 * 		The speed in ms
 	 */
 	public JQAnimationsFeature(JQEasingEffects openingEffect, JQEasingEffects closingEffect, int movementSpeed)
 	{
@@ -56,34 +59,36 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 		this.openingEffect = openingEffect;
 		this.closingEffect = closingEffect;
 		this.movementSpeed = movementSpeed;
-		//getJavascriptReferences().add(new JQEasingJavascriptReference());
 	}
-	
+
 	/**
 	 * Creates an animation with a closing and opening effect at 2500 milliseconds
 	 *
-	 * @param openingEffect The effect to use on opening
-	 * @param closingEffect The effect to use on closing
+	 * @param openingEffect
+	 * 		The effect to use on opening
+	 * @param closingEffect
+	 * 		The effect to use on closing
 	 */
 	public JQAnimationsFeature(JQEasingEffects openingEffect, JQEasingEffects closingEffect)
 	{
 		this(openingEffect, closingEffect, 2500);
 	}
-	
+
 	/**
 	 * Creates an animation with a closing and opening effect at 2500 milliseconds
 	 *
-	 * @param effect Adds an effect to closing and opening with 2500 milliseconds
+	 * @param effect
+	 * 		Adds an effect to closing and opening with 2500 milliseconds
 	 */
 	public JQAnimationsFeature(JQEasingEffects effect)
 	{
 		this(effect, effect, 2500);
 	}
-	
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-	
+		//No config required
 	}
 
 	/**
@@ -144,5 +149,44 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	public void setMovementSpeed(int movementSpeed)
 	{
 		this.movementSpeed = movementSpeed;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JQAnimationsFeature that = (JQAnimationsFeature) o;
+
+		if (getMovementSpeed() != that.getMovementSpeed())
+		{
+			return false;
+		}
+		if (getOpeningEffect() != that.getOpeningEffect())
+		{
+			return false;
+		}
+		return getClosingEffect() == that.getClosingEffect();
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getOpeningEffect() != null ? getOpeningEffect().hashCode() : 0);
+		result = 31 * result + (getClosingEffect() != null ? getClosingEffect().hashCode() : 0);
+		result = 31 * result + getMovementSpeed();
+		return result;
 	}
 }
