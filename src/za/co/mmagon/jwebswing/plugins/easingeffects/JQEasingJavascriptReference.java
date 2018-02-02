@@ -36,6 +36,7 @@ public class JQEasingJavascriptReference extends JavascriptReference
 	public JQEasingJavascriptReference()
 	{
 		super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
+		setSortOrder(4);
 		setPriority(RequirementsPriority.Third);
 	}
 }
