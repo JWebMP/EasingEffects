@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,21 +19,22 @@ package za.co.mmagon.jwebswing.plugins.easingeffects;
 import za.co.mmagon.jwebswing.generics.Direction;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * This is the universal easing animation object JavaScript part
  * <p>
  *
  * @author MMagon
- * <p>
- * <p>
+ * 		<p>
+ * 		<p>
  * @version 1.0
  * @since 2014 07 29
  */
-public class JQEasingAnimationEffectsPart extends JavaScriptPart
+public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart<J>> extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;
-
 	/**
 	 * The easing object
 	 */
@@ -58,9 +59,12 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 * Construct a new animation effects part using the supplies parameters
 	 * <p>
 	 *
-	 * @param easing    The actual animation to apply
-	 * @param duration  The duration in ms to apply
-	 * @param direction The direction in which to apply it
+	 * @param easing
+	 * 		The actual animation to apply
+	 * @param duration
+	 * 		The duration in ms to apply
+	 * @param direction
+	 * 		The direction in which to apply it
 	 */
 	public JQEasingAnimationEffectsPart(JQEasingEffects easing, Integer duration, Direction direction)
 	{
@@ -73,7 +77,8 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 * Construct a new animation effects part using the supplies parameters
 	 * <p>
 	 *
-	 * @param easing The actual animation to apply
+	 * @param easing
+	 * 		The actual animation to apply
 	 */
 	public JQEasingAnimationEffectsPart(JQEasingEffects easing)
 	{
@@ -84,8 +89,10 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 * Construct a new animation effects part using the supplies parameters
 	 * <p>
 	 *
-	 * @param easing   The actual animation to apply
-	 * @param duration The duration in ms to apply
+	 * @param easing
+	 * 		The actual animation to apply
+	 * @param duration
+	 * 		The duration in ms to apply
 	 */
 	public JQEasingAnimationEffectsPart(JQEasingEffects easing, Integer duration)
 	{
@@ -110,9 +117,12 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 *
 	 * @param easing
 	 */
-	public void setEasing(JQEasingEffects easing)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setEasing(JQEasingEffects easing)
 	{
 		this.easing = easing;
+		return (J) this;
 	}
 
 	/**
@@ -132,9 +142,12 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 *
 	 * @param duration
 	 */
-	public void setDuration(Integer duration)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setDuration(Integer duration)
 	{
 		this.duration = duration;
+		return (J) this;
 	}
 
 	/**
@@ -154,8 +167,11 @@ public class JQEasingAnimationEffectsPart extends JavaScriptPart
 	 *
 	 * @param direction
 	 */
-	public void setDirection(Direction direction)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setDirection(Direction direction)
 	{
 		this.direction = direction;
+		return (J) this;
 	}
 }
