@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.easingeffects;
+package com.jwebmp.plugins.easingeffects;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.EasingAnimation;
+import com.jwebmp.base.html.interfaces.EasingAnimation;
 
 /**
  * Defines the effects available in the Easing Animation Suite
@@ -24,7 +24,8 @@ import za.co.mmagon.jwebswing.base.html.interfaces.EasingAnimation;
  *
  * @author mmagon
  */
-public enum JQEasingEffects implements EasingAnimation
+public enum JQEasingEffects
+		implements EasingAnimation
 {
 
 	linear,
@@ -65,5 +66,5 @@ public enum JQEasingEffects implements EasingAnimation
 	/**
 	 * Sets this field as not set
 	 */
-	Unset;
+	Unset
 }

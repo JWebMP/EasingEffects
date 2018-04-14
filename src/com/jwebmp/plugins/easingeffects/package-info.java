@@ -14,29 +14,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.easingeffects;
-
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
-import za.co.mmagon.jwebswing.base.servlets.enumarations.RequirementsPriority;
-
-/**
- * @author GedMarc
- * @version 1.0
- * <p>
- * @since Mar 1, 2015
- */
-public class JQEasingJavascriptReference extends JavascriptReference
-{
-
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 *
-	 */
-	public JQEasingJavascriptReference()
-	{
-		super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
-		setSortOrder(4);
-		setPriority(RequirementsPriority.Third);
-	}
-}
+package com.jwebmp.plugins.easingeffects;

@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.easingeffects;
+package com.jwebmp.plugins.easingeffects;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
 
 /**
  * @author GedMarc
@@ -26,8 +26,7 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
  */
 @PluginInformation(pluginName = "Easing Animations",
 		pluginUniqueName = "easing",
-		pluginDescription = "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?"
-				                    + "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in” and “ease out,” respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
+		pluginDescription = "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?" + "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in” and “ease out,” respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
 		pluginVersion = "1.4.1",
 		pluginDependancyUniqueIDs = "jquery",
 		pluginCategories = "animation, jquery,easing",
@@ -39,9 +38,9 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
 		pluginIconUrl = "bower_components/jquery-easing/icon.png",
 		pluginIconImageUrl = "bower_components/jquery-easing/example.png",
-		pluginLastUpdatedDate = "2017/03/04"
-)
-public class EasingPageConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/03/04")
+public class EasingPageConfigurator
+		extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
@@ -70,7 +69,8 @@ public class EasingPageConfigurator extends PageConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			page.getBody().addJavaScriptReference(reference);
+			page.getBody()
+			    .addJavaScriptReference(reference);
 		}
 		return page;
 	}

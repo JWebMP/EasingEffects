@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plguns.easingeffects;
+package com.jwebmp.plguns.easingeffects;
 
+import com.jwebmp.generics.Direction;
+import com.jwebmp.plugins.easingeffects.JQEasingAnimationEffectsPart;
+import com.jwebmp.plugins.easingeffects.JQEasingEffects;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.generics.Direction;
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingAnimationEffectsPart;
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
 /**
  * @author GedMarc

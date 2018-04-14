@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,19 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.easingeffects;
+package com.jwebmp.plugins.easingeffects;
 
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.IFeature;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.Feature;
+import com.jwebmp.base.servlets.interfaces.IFeature;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.plugins.ComponentInformation;
 
 /**
  * @author Marc Magon
  */
-@ComponentInformation(name = "Easing Animations ", description = "Specify an easing animation for a component",
+@ComponentInformation(name = "Easing Animations ",
+		description = "Specify an easing animation for a component",
 		url = "http://gsgd.co.uk/sandbox/jquery/easing/")
-public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFeature> implements IFeature
+public class JQAnimationsFeature
+		extends Feature<JavaScriptPart, JQAnimationsFeature>
+		implements IFeature
 {
 
 	private static final long serialVersionUID = 1L;
@@ -42,6 +45,19 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	 * The movement speed (default 200)
 	 */
 	private int movementSpeed = 2500;
+
+	/**
+	 * Creates an animation with a closing and opening effect at 2500 milliseconds
+	 *
+	 * @param openingEffect
+	 * 		The effect to use on opening
+	 * @param closingEffect
+	 * 		The effect to use on closing
+	 */
+	public JQAnimationsFeature(JQEasingEffects openingEffect, JQEasingEffects closingEffect)
+	{
+		this(openingEffect, closingEffect, 2500);
+	}
 
 	/**
 	 * Creates an animation with a closing and opening effect at the movement speed in milliseconds
@@ -64,25 +80,51 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	/**
 	 * Creates an animation with a closing and opening effect at 2500 milliseconds
 	 *
-	 * @param openingEffect
-	 * 		The effect to use on opening
-	 * @param closingEffect
-	 * 		The effect to use on closing
-	 */
-	public JQAnimationsFeature(JQEasingEffects openingEffect, JQEasingEffects closingEffect)
-	{
-		this(openingEffect, closingEffect, 2500);
-	}
-
-	/**
-	 * Creates an animation with a closing and opening effect at 2500 milliseconds
-	 *
 	 * @param effect
 	 * 		Adds an effect to closing and opening with 2500 milliseconds
 	 */
 	public JQAnimationsFeature(JQEasingEffects effect)
 	{
 		this(effect, effect, 2500);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getOpeningEffect() != null ? getOpeningEffect().hashCode() : 0);
+		result = 31 * result + (getClosingEffect() != null ? getClosingEffect().hashCode() : 0);
+		result = 31 * result + getMovementSpeed();
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JQAnimationsFeature that = (JQAnimationsFeature) o;
+
+		if (getMovementSpeed() != that.getMovementSpeed())
+		{
+			return false;
+		}
+		if (getOpeningEffect() != that.getOpeningEffect())
+		{
+			return false;
+		}
+		return getClosingEffect() == that.getClosingEffect();
 	}
 
 	@Override
@@ -122,16 +164,6 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 	}
 
 	/**
-	 * Sets the closing effect
-	 *
-	 * @param closingEffect
-	 */
-	public void setClosingEffect(JQEasingEffects closingEffect)
-	{
-		this.closingEffect = closingEffect;
-	}
-
-	/**
 	 * Gets the movement speed
 	 *
 	 * @return
@@ -151,42 +183,13 @@ public class JQAnimationsFeature extends Feature<JavaScriptPart, JQAnimationsFea
 		this.movementSpeed = movementSpeed;
 	}
 
-	@Override
-	public boolean equals(Object o)
+	/**
+	 * Sets the closing effect
+	 *
+	 * @param closingEffect
+	 */
+	public void setClosingEffect(JQEasingEffects closingEffect)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JQAnimationsFeature that = (JQAnimationsFeature) o;
-
-		if (getMovementSpeed() != that.getMovementSpeed())
-		{
-			return false;
-		}
-		if (getOpeningEffect() != that.getOpeningEffect())
-		{
-			return false;
-		}
-		return getClosingEffect() == that.getClosingEffect();
-	}
-
-	@Override
-	public int hashCode()
-	{
-		int result = super.hashCode();
-		result = 31 * result + (getOpeningEffect() != null ? getOpeningEffect().hashCode() : 0);
-		result = 31 * result + (getClosingEffect() != null ? getClosingEffect().hashCode() : 0);
-		result = 31 * result + getMovementSpeed();
-		return result;
+		this.closingEffect = closingEffect;
 	}
 }
