@@ -22,10 +22,11 @@ import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
 /**
  * @author GedMarc
  * @version 1.0
- * <p>
+ * 		<p>
  * @since Mar 1, 2015
  */
-public class JQEasingJavascriptReference extends JavascriptReference
+public class JQEasingJavascriptReference
+		extends JavascriptReference
 {
 
 	private static final long serialVersionUID = 1L;

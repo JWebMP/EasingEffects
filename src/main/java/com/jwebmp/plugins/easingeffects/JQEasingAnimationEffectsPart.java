@@ -31,7 +31,8 @@ import javax.validation.constraints.NotNull;
  * @version 1.0
  * @since 2014 07 29
  */
-public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart<J>> extends JavaScriptPart<J>
+public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart<J>>
+		extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;
