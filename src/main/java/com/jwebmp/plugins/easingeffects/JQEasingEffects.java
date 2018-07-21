@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.easingeffects;
 
-import com.jwebmp.base.html.interfaces.EasingAnimation;
+import com.jwebmp.core.base.html.interfaces.EasingAnimation;
 
 /**
  * Defines the effects available in the Easing Animation Suite

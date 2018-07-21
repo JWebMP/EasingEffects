@@ -16,8 +16,8 @@
  */
 package com.jwebmp.plugins.easingeffects;
 
-import com.jwebmp.generics.Direction;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.generics.Direction;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 import javax.validation.constraints.NotNull;
 

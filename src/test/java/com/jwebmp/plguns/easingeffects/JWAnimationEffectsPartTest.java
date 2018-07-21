@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plguns.easingeffects;
 
-import com.jwebmp.generics.Direction;
+import com.jwebmp.core.generics.Direction;
 import com.jwebmp.plugins.easingeffects.JQEasingAnimationEffectsPart;
 import com.jwebmp.plugins.easingeffects.JQEasingEffects;
 import org.junit.jupiter.api.Test;

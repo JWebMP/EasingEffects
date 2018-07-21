@@ -16,10 +16,10 @@
  */
 package com.jwebmp.plugins.easingeffects;
 
-import com.jwebmp.Feature;
-import com.jwebmp.base.servlets.interfaces.IFeature;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.servlets.interfaces.IFeature;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.plugins.ComponentInformation;
 
 /**
  * @author Marc Magon
