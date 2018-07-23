@@ -1,3 +1,6 @@
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.easingeffects.EasingPageConfigurator;
+
 module com.jwebmp.plugins.easingeffects {
 	exports com.jwebmp.plugins.easingeffects;
 
@@ -7,4 +10,7 @@ module com.jwebmp.plugins.easingeffects {
 
 	requires java.validation;
 	requires java.logging;
+
+	provides IPageConfigurator with EasingPageConfigurator;
+
 }
