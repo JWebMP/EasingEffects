@@ -12,5 +12,5 @@ module com.jwebmp.plugins.easingeffects {
 	requires java.logging;
 
 	provides IPageConfigurator with EasingPageConfigurator;
-
+	opens com.jwebmp.plugins.easingeffects to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
