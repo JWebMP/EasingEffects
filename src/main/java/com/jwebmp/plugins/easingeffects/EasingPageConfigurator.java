@@ -20,6 +20,8 @@ import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.services.IPageConfigurator;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author GedMarc
  * @since 26 Feb 2017
@@ -65,6 +67,7 @@ public class EasingPageConfigurator
 		return reference;
 	}
 
+	@NotNull
 	@Override
 	public Page configure(Page page)
 	{
