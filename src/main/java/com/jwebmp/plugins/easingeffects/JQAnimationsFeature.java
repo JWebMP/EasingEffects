@@ -17,7 +17,6 @@
 package com.jwebmp.plugins.easingeffects;
 
 import com.jwebmp.core.Feature;
-import com.jwebmp.core.base.servlets.interfaces.IFeature;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 import com.jwebmp.core.plugins.ComponentInformation;
 
@@ -28,8 +27,7 @@ import com.jwebmp.core.plugins.ComponentInformation;
 		description = "Specify an easing animation for a component",
 		url = "http://gsgd.co.uk/sandbox/jquery/easing/")
 public class JQAnimationsFeature
-		extends Feature<JavaScriptPart, JQAnimationsFeature>
-		implements IFeature
+		extends Feature<JQAnimationsFeature, JavaScriptPart, JQAnimationsFeature>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -91,40 +89,13 @@ public class JQAnimationsFeature
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getOpeningEffect() != null ? getOpeningEffect().hashCode() : 0);
-		result = 31 * result + (getClosingEffect() != null ? getClosingEffect().hashCode() : 0);
-		result = 31 * result + getMovementSpeed();
-		return result;
+		return super.hashCode();
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public boolean equals(Object obj)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JQAnimationsFeature that = (JQAnimationsFeature) o;
-
-		if (getMovementSpeed() != that.getMovementSpeed())
-		{
-			return false;
-		}
-		if (getOpeningEffect() != that.getOpeningEffect())
-		{
-			return false;
-		}
-		return getClosingEffect() == that.getClosingEffect();
+		return super.equals(obj);
 	}
 
 	@Override
@@ -164,6 +135,16 @@ public class JQAnimationsFeature
 	}
 
 	/**
+	 * Sets the closing effect
+	 *
+	 * @param closingEffect
+	 */
+	public void setClosingEffect(JQEasingEffects closingEffect)
+	{
+		this.closingEffect = closingEffect;
+	}
+
+	/**
 	 * Gets the movement speed
 	 *
 	 * @return
@@ -181,15 +162,5 @@ public class JQAnimationsFeature
 	public void setMovementSpeed(int movementSpeed)
 	{
 		this.movementSpeed = movementSpeed;
-	}
-
-	/**
-	 * Sets the closing effect
-	 *
-	 * @param closingEffect
-	 */
-	public void setClosingEffect(JQEasingEffects closingEffect)
-	{
-		this.closingEffect = closingEffect;
 	}
 }
