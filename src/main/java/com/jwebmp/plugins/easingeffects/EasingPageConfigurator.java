@@ -46,8 +46,11 @@ import javax.validation.constraints.NotNull;
 public class EasingPageConfigurator
 		implements IPageConfigurator
 {
-
 	private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 
 	/**
 	 * A new instance of the page configurator
@@ -58,13 +61,38 @@ public class EasingPageConfigurator
 	}
 
 	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return EasingPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		EasingPageConfigurator.enabled = mustEnable;
+	}
+
+	/**
 	 * Get the reference
 	 *
 	 * @return
 	 */
 	public static JQEasingJavascriptReference getReference()
 	{
-		return reference;
+		return EasingPageConfigurator.reference;
 	}
 
 	@NotNull
@@ -74,9 +102,15 @@ public class EasingPageConfigurator
 		if (!page.isConfigured())
 		{
 			page.getBody()
-			    .addJavaScriptReference(reference);
+			    .addJavaScriptReference(EasingPageConfigurator.reference);
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return EasingPageConfigurator.enabled;
 	}
 
 }
