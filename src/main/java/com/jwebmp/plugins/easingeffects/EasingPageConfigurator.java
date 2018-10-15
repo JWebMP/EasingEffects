@@ -35,16 +35,16 @@ import javax.validation.constraints.NotNull;
 		pluginDependancyUniqueIDs = "jquery",
 		pluginCategories = "animation, jquery,easing",
 		pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects",
 		pluginSourceUrl = "http://gsgd.co.uk/sandbox/jquery/easing/",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-JQEasingEffects/wiki",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects/wiki",
 		pluginOriginalHomepage = "http://easings.net/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
 		pluginIconUrl = "bower_components/jquery-easing/icon.png",
 		pluginIconImageUrl = "bower_components/jquery-easing/example.png",
 		pluginLastUpdatedDate = "2017/03/04")
 public class EasingPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<EasingPageConfigurator>
 {
 	private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
 	/**
