@@ -30,7 +30,7 @@ public class JQAnimationsFeature
 		extends Feature<JQAnimationsFeature, JavaScriptPart, JQAnimationsFeature>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The opening effect
 	 */

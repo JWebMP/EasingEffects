@@ -35,7 +35,7 @@ public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart
 		extends JavaScriptPart<J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The easing object
 	 */
