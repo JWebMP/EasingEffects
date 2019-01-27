@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.easingeffects.EasingPageConfigurator;
-import com.jwebmp.plugins.easingeffects.implementations.EasingEffectsExclusionsModule;
-
 module com.jwebmp.plugins.easingeffects {
 	exports com.jwebmp.plugins.easingeffects;
 
@@ -15,10 +9,10 @@ module com.jwebmp.plugins.easingeffects {
 	requires java.logging;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with EasingPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.easingeffects.EasingPageConfigurator;
 
-	provides IGuiceScanJarExclusions with EasingEffectsExclusionsModule;
-	provides IGuiceScanModuleExclusions with EasingEffectsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.easingeffects.implementations.EasingEffectsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.easingeffects.implementations.EasingEffectsExclusionsModule;
 
 	opens com.jwebmp.plugins.easingeffects to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
