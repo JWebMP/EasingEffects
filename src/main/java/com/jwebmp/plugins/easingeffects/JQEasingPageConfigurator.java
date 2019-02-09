@@ -43,8 +43,8 @@ import javax.validation.constraints.NotNull;
 		pluginIconUrl = "bower_components/jquery-easing/icon.png",
 		pluginIconImageUrl = "bower_components/jquery-easing/example.png",
 		pluginLastUpdatedDate = "2017/03/04")
-public class EasingPageConfigurator
-		implements IPageConfigurator<EasingPageConfigurator>
+public class JQEasingPageConfigurator
+		implements IPageConfigurator<JQEasingPageConfigurator>
 {
 	private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
 	/**
@@ -55,9 +55,31 @@ public class EasingPageConfigurator
 	/**
 	 * A new instance of the page configurator
 	 */
-	public EasingPageConfigurator()
+	public JQEasingPageConfigurator()
 	{
 		//No config needed
+	}
+
+	/**
+	 * Get the reference
+	 *
+	 * @return
+	 */
+	public static JQEasingJavascriptReference getReference()
+	{
+		return JQEasingPageConfigurator.reference;
+	}
+
+	@NotNull
+	@Override
+	public Page configure(Page page)
+	{
+		if (!page.isConfigured() && isEnabled())
+		{
+			page.getBody()
+			    .addJavaScriptReference(JQEasingPageConfigurator.reference);
+		}
+		return page;
 	}
 
 	/**
@@ -69,7 +91,7 @@ public class EasingPageConfigurator
 	 */
 	public static boolean isEnabled()
 	{
-		return EasingPageConfigurator.enabled;
+		return JQEasingPageConfigurator.enabled;
 	}
 
 	/**
@@ -82,35 +104,13 @@ public class EasingPageConfigurator
 	 */
 	public static void setEnabled(boolean mustEnable)
 	{
-		EasingPageConfigurator.enabled = mustEnable;
-	}
-
-	/**
-	 * Get the reference
-	 *
-	 * @return
-	 */
-	public static JQEasingJavascriptReference getReference()
-	{
-		return EasingPageConfigurator.reference;
-	}
-
-	@NotNull
-	@Override
-	public Page configure(Page page)
-	{
-		if (!page.isConfigured())
-		{
-			page.getBody()
-			    .addJavaScriptReference(EasingPageConfigurator.reference);
-		}
-		return page;
+		JQEasingPageConfigurator.enabled = mustEnable;
 	}
 
 	@Override
 	public boolean enabled()
 	{
-		return EasingPageConfigurator.enabled;
+		return JQEasingPageConfigurator.enabled;
 	}
 
 }

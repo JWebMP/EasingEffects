@@ -1,3 +1,5 @@
+import com.jwebmp.plugins.easingeffects.JQEasingPageConfigurator;
+
 module com.jwebmp.plugins.easingeffects {
 	exports com.jwebmp.plugins.easingeffects;
 
@@ -9,7 +11,7 @@ module com.jwebmp.plugins.easingeffects {
 	requires java.logging;
 	requires com.jwebmp.guicedinjection;
 
-	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.easingeffects.EasingPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with JQEasingPageConfigurator;
 
 	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.easingeffects.implementations.EasingEffectsExclusionsModule;
 	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.easingeffects.implementations.EasingEffectsExclusionsModule;
