@@ -1,7 +1,7 @@
 {
   "name": "jquery.easing",
   "main": "jquery.easing.js",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "homepage": "https://github.com/gdsmith/jquery.easing",
   "authors": [
     "George McGinley Smith <george@gsgd.co.uk>"
@@ -25,11 +25,11 @@
     "**/.*",
     "example"
   ],
-  "_release": "1.4.1",
+  "_release": "1.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "1.4.1",
-    "commit": "9115e1367339bb8c7b8a51b41df4e89371c0ed10"
+    "tag": "1.4.2",
+    "commit": "df09da4048d2607c5d513681dff532dbe6680d95"
   },
   "_source": "https://github.com/gdsmith/jquery.easing.git",
   "_target": "*",
