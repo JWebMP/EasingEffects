@@ -20,7 +20,7 @@ import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.services.IPageConfigurator;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * @author GedMarc
@@ -30,7 +30,7 @@ import javax.validation.constraints.NotNull;
 		pluginUniqueName = "easing",
 		pluginDescription =
 				"Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?" +
-				"<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in” and “ease out,” respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
+				"<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in? and “ease out,? respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
 		pluginVersion = "1.4.1",
 		pluginDependancyUniqueIDs = "jquery",
 		pluginCategories = "animation, jquery,easing",

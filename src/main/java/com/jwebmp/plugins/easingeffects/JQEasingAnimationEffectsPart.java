@@ -19,7 +19,7 @@ package com.jwebmp.plugins.easingeffects;
 import com.jwebmp.core.generics.Direction;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * This is the universal easing animation object JavaScript part
