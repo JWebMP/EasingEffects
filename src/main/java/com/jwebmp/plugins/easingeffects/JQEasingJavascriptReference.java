@@ -35,7 +35,7 @@ public class JQEasingJavascriptReference
 	 */
 	public JQEasingJavascriptReference()
 	{
-		super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.4.js");
+		super("EasingAnimations", 1.41, "bower_components/jquery-easing/jquery.easing.min.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js");
 		setSortOrder(4);
 		setPriority(RequirementsPriority.Third);
 	}

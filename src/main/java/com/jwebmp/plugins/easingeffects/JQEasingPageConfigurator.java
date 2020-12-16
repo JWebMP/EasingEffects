@@ -18,6 +18,7 @@ package com.jwebmp.plugins.easingeffects;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 
 import jakarta.validation.constraints.NotNull;
@@ -36,13 +37,18 @@ import jakarta.validation.constraints.NotNull;
 		pluginCategories = "animation, jquery,easing",
 		pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
 		pluginGitUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects",
-		pluginSourceUrl = "http://gsgd.co.uk/sandbox/jquery/easing/",
+		pluginSourceUrl = "https://github.com/ai/easings.net",
 		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects/wiki",
 		pluginOriginalHomepage = "http://easings.net/",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQEasingEffects.jar/download",
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.javascript/jwebmp-easing-effects",
 		pluginIconUrl = "bower_components/jquery-easing/icon.png",
 		pluginIconImageUrl = "bower_components/jquery-easing/example.png",
-		pluginLastUpdatedDate = "2017/03/04")
+		pluginLastUpdatedDate = "2017/03/04",
+		pluginGroupId = "com.jwebmp.plugins.javascript",
+		pluginArtifactId = "jwebmp-easing-effects",
+		pluginModuleName = "com.jwebmp.plugins.easingeffects",
+		pluginStatus = PluginStatus.Released
+)
 public class JQEasingPageConfigurator
 		implements IPageConfigurator<JQEasingPageConfigurator>
 {

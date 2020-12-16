@@ -24,13 +24,12 @@ import com.jwebmp.core.plugins.ComponentInformation;
  * @author GedMarc
  */
 @ComponentInformation(name = "Easing Animations ",
-		description = "Specify an easing animation for a component",
-		url = "http://gsgd.co.uk/sandbox/jquery/easing/")
+		description = "Specifies an easing animation for a component",
+		url = "http://easings.net/")
 public class JQAnimationsFeature
-		extends Feature<JQAnimationsFeature, JavaScriptPart, JQAnimationsFeature>
+		extends Feature<JQAnimationsFeature, JavaScriptPart<?>, JQAnimationsFeature>
 {
-
-
+	
 	/**
 	 * The opening effect
 	 */
