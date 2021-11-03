@@ -10,7 +10,7 @@
     <groupId>com.jwebmp.plugins.javascript</groupId>
     <artifactId>jwebmp-easing-effects</artifactId>
     <packaging>jar</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>Easing Effects</name>
     <description>The JWebSwing implementation for Easing Effects</description>
     <url>https://github.com/GedMarc/JWebSwing-JQEasingEffects</url>
