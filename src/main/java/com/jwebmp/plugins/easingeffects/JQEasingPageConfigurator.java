@@ -17,6 +17,8 @@
 package com.jwebmp.plugins.easingeffects;
 
 import com.jwebmp.core.Page;
+import com.jwebmp.core.base.angular.client.annotations.angularconfig.*;
+import com.jwebmp.core.base.angular.client.annotations.typescript.*;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
@@ -49,10 +51,11 @@ import jakarta.validation.constraints.NotNull;
 		pluginModuleName = "com.jwebmp.plugins.easingeffects",
 		pluginStatus = PluginStatus.Released
 )
+@TsDependency(value = "easing",version = "*")
+@NgScript(value = "easing/browser-easing.js",sortOrder = 4)
 public class JQEasingPageConfigurator
 		implements IPageConfigurator<JQEasingPageConfigurator>
 {
-	private static final JQEasingJavascriptReference reference = new JQEasingJavascriptReference();
 	/**
 	 * If this configurator is enabled
 	 */
@@ -66,24 +69,13 @@ public class JQEasingPageConfigurator
 		//No config needed
 	}
 
-	/**
-	 * Get the reference
-	 *
-	 * @return
-	 */
-	public static JQEasingJavascriptReference getReference()
-	{
-		return JQEasingPageConfigurator.reference;
-	}
-
 	@NotNull
 	@Override
 	 public Page<?> configure(Page<?> page)
 	{
 		if (!page.isConfigured() && isEnabled())
 		{
-			page.getBody()
-			    .addJavaScriptReference(JQEasingPageConfigurator.reference);
+	
 		}
 		return page;
 	}
