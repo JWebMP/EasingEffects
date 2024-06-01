@@ -22,33 +22,32 @@ import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPage;
 import com.jwebmp.core.services.IPageConfigurator;
-import jakarta.validation.constraints.NotNull;
 
 /**
  * @author GedMarc
  * @since 26 Feb 2017
  */
 @PluginInformation(pluginName = "Easing Animations",
-        pluginUniqueName = "easing",
-        pluginDescription =
-                "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?" +
-                        "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in? and “ease out,? respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
-        pluginVersion = "1.4.1",
-        pluginDependancyUniqueIDs = "jquery",
-        pluginCategories = "animation, jquery,easing",
-        pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
-        pluginGitUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects",
-        pluginSourceUrl = "https://github.com/ai/easings.net",
-        pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects/wiki",
-        pluginOriginalHomepage = "http://easings.net/",
-        pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.javascript/jwebmp-easing-effects",
-        pluginIconUrl = "bower_components/jquery-easing/icon.png",
-        pluginIconImageUrl = "bower_components/jquery-easing/example.png",
-        pluginLastUpdatedDate = "2017/03/04",
-        pluginGroupId = "com.jwebmp.plugins.javascript",
-        pluginArtifactId = "jwebmp-easing-effects",
-        pluginModuleName = "com.jwebmp.plugins.easingeffects",
-        pluginStatus = PluginStatus.Released
+                   pluginUniqueName = "easing",
+                   pluginDescription =
+                           "Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?" +
+                                   "<br/>In classic animation, the term for motion that starts slowly and accelerates is \"slow in,\" and for motion that starts quickly and decelerates is \"slow out.\" The terminology most commonly used on the web for these are “ease in? and “ease out,? respectively. Sometimes the two are combined, which is called \"ease in out.\" Easing, then, is really the process of making the animation less severe or pronounced.",
+                   pluginVersion = "1.4.1",
+                   pluginDependancyUniqueIDs = "jquery",
+                   pluginCategories = "animation, jquery,easing",
+                   pluginSubtitle = "A jQuery plugin from GSGD to give advanced easing options.",
+                   pluginGitUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects",
+                   pluginSourceUrl = "https://github.com/ai/easings.net",
+                   pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQEasingEffects/wiki",
+                   pluginOriginalHomepage = "http://easings.net/",
+                   pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.javascript/jwebmp-easing-effects",
+                   pluginIconUrl = "bower_components/jquery-easing/icon.png",
+                   pluginIconImageUrl = "bower_components/jquery-easing/example.png",
+                   pluginLastUpdatedDate = "2017/03/04",
+                   pluginGroupId = "com.jwebmp.plugins.javascript",
+                   pluginArtifactId = "jwebmp-easing-effects",
+                   pluginModuleName = "com.jwebmp.plugins.easingeffects",
+                   pluginStatus = PluginStatus.Released
 )
 @TsDependency(value = "easing", version = "*")
 @NgScript(value = "easing/browser-easing.js", sortOrder = 4)
@@ -68,7 +67,6 @@ public class JQEasingPageConfigurator
         //No config needed
     }
 
-    @NotNull
     @Override
     public IPage<?> configure(IPage<?> page)
     {

@@ -24,8 +24,8 @@ import com.jwebmp.core.plugins.ComponentInformation;
  * @author GedMarc
  */
 @ComponentInformation(name = "Easing Animations ",
-        description = "Specifies an easing animation for a component",
-        url = "http://easings.net/")
+                      description = "Specifies an easing animation for a component",
+                      url = "http://easings.net/")
 public class JQAnimationsFeature
         extends Feature<JQAnimationsFeature, JavaScriptPart<?>, JQAnimationsFeature>
 {
