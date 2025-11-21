@@ -120,7 +120,7 @@ public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart
 	 */
 	@SuppressWarnings("unchecked")
 	@NotNull
-	public J setEasing(JQEasingEffects easing)
+	public @org.jspecify.annotations.NonNull J setEasing(JQEasingEffects easing)
 	{
 		this.easing = easing;
 		return (J) this;
@@ -145,7 +145,7 @@ public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart
 	 */
 	@SuppressWarnings("unchecked")
 	@NotNull
-	public J setDuration(Integer duration)
+	public @org.jspecify.annotations.NonNull J setDuration(Integer duration)
 	{
 		this.duration = duration;
 		return (J) this;
@@ -170,7 +170,7 @@ public class JQEasingAnimationEffectsPart<J extends JQEasingAnimationEffectsPart
 	 */
 	@SuppressWarnings("unchecked")
 	@NotNull
-	public J setDirection(Direction direction)
+	public @org.jspecify.annotations.NonNull J setDirection(Direction direction)
 	{
 		this.direction = direction;
 		return (J) this;
