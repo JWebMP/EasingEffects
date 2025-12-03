@@ -1,3 +1,4 @@
+import com.guicedee.client.services.config.IGuiceScanModuleInclusions;
 import com.jwebmp.plugins.easingeffects.implementations.EasingEffectsInclusionModule;
 
 module com.jwebmp.plugins.easingeffects {
@@ -8,7 +9,7 @@ module com.jwebmp.plugins.easingeffects {
     requires com.jwebmp.core;
 
     provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.easingeffects.JQEasingPageConfigurator;
-    provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleInclusions with EasingEffectsInclusionModule;
+    provides IGuiceScanModuleInclusions with EasingEffectsInclusionModule;
 
     opens com.jwebmp.plugins.easingeffects to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
