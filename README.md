@@ -12,9 +12,9 @@
 ![Easing](https://img.shields.io/badge/Easing-1.4.1-blueviolet)
 ![JWebMP](https://img.shields.io/badge/JWebMP-2.0-0A7)
 
-Advanced easing animation effects for JWebMP with Angular 20. Provides 33 easing timing functions based on easings.net for smooth, natural animations in web applications.
+Advanced easing animation effects for JWebMP with Angular 21. Provides 33 easing timing functions based on easings.net for smooth, natural animations in web applications.
 
-Built on [easings.net](https://easings.net/) · [Angular 20](https://angular.dev/) · [JWebMP Core](https://jwebmp.com/) · JPMS module `com.jwebmp.plugins.easingeffects` · Java 25+
+Built on [easings.net](https://easings.net/) · [Angular 21](https://angular.dev/) · [JWebMP Core](https://jwebmp.com/) · JPMS module `com.jwebmp.plugins.easingeffects` · Java 25+
 
 **Version: 1.4.1** — Complete easing animation library with type-safe Java enum API.
 
@@ -24,7 +24,7 @@ Built on [easings.net](https://easings.net/) · [Angular 20](https://angular.dev
 <dependency>
   <groupId>com.jwebmp.plugins</groupId>
   <artifactId>easing-effects</artifactId>
-  <version>2.0.0-SNAPSHOT</version>
+  <version>2.0.0-RC1</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ Built on [easings.net](https://easings.net/) · [Angular 20](https://angular.dev
 <summary>Gradle (Kotlin DSL)</summary>
 
 ```kotlin
-implementation("com.jwebmp.plugins:easing-effects:2.0.0-SNAPSHOT")
+implementation("com.jwebmp.plugins:easing-effects:2.0.0-RC1")
 ```
 </details>
 
@@ -52,7 +52,7 @@ The plugin automatically includes easing dependencies:
 
 - **33 Easing Functions** — Complete library of animation timing functions
 - **Type-Safe Enum API** — Java enum for compile-time safety and IDE autocomplete
-- **Angular 20 Integration** — Auto-loaded via PageConfigurator with browser-easing.js
+- **Angular 21 Integration** — Auto-loaded via PageConfigurator with browser-easing.js
 - **Based on easings.net** — Industry-standard easing reference implementation
 - **Zero Configuration** — Auto-registered via ServiceLoader SPI
 - **Modular Architecture** — JPMS module with explicit dependencies
@@ -68,7 +68,7 @@ The plugin automatically includes easing dependencies:
 - **Java 25 LTS** (required)
 - **Maven 3.8+**
 - **Node.js 18+** (for frontend builds)
-- **Angular 20+** (auto-integrated via JWebMP)
+- **Angular 21+** (auto-integrated via JWebMP)
 
 ### Basic Usage
 
@@ -173,7 +173,7 @@ JQEasingEffects.easeInOutBounce
 ### Technology Stack
 
 - **Backend**: Java 25 LTS, Maven, GuicedEE (IoC)
-- **Frontend**: Angular 20, TypeScript, easing library
+- **Frontend**: Angular 21, TypeScript, easing library
 - **Integration**: JWebMP Page Configurators, ServiceLoader SPI
 - **Animation**: Easings.net reference implementation
 - **Module System**: JPMS with explicit dependencies
@@ -455,7 +455,7 @@ Contributions are welcome! Please follow these guidelines:
 
 | Aspect | Status |
 |--------|--------|
-| **Version** | 1.4.1 / 2.0.0-SNAPSHOT |
+| **Version** | 1.4.1 / 2.0.0-RC1 |
 | **Easing Functions** | 33 complete |
 | **Java** | 25 LTS (required) |
 | **Build** | Passing |
