@@ -24,7 +24,7 @@ Built on [easings.net](https://easings.net/) · [Angular 21](https://angular.dev
 <dependency>
   <groupId>com.jwebmp.plugins</groupId>
   <artifactId>easing-effects</artifactId>
-  <version>2.0.0-RC4</version>
+  <version>2.0.0-RC5</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ Built on [easings.net](https://easings.net/) · [Angular 21](https://angular.dev
 <summary>Gradle (Kotlin DSL)</summary>
 
 ```kotlin
-implementation("com.jwebmp.plugins:easing-effects:2.0.0-RC4")
+implementation("com.jwebmp.plugins:easing-effects:2.0.0-RC5")
 ```
 </details>
 
@@ -455,7 +455,7 @@ Contributions are welcome! Please follow these guidelines:
 
 | Aspect | Status |
 |--------|--------|
-| **Version** | 1.4.1 / 2.0.0-RC4 |
+| **Version** | 1.4.1 / 2.0.0-RC5 |
 | **Easing Functions** | 33 complete |
 | **Java** | 25 LTS (required) |
 | **Build** | Passing |
