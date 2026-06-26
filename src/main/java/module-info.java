@@ -11,5 +11,5 @@ module com.jwebmp.plugins.easingeffects {
     provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.easingeffects.JQEasingPageConfigurator;
     provides IGuiceScanModuleInclusions with EasingEffectsInclusionModule;
 
-    opens com.jwebmp.plugins.easingeffects to com.fasterxml.jackson.databind, com.jwebmp.core;
+    opens com.jwebmp.plugins.easingeffects to tools.jackson.databind, com.jwebmp.core;
 }
